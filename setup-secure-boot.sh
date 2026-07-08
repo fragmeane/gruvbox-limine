@@ -75,7 +75,6 @@ install_theme() {
     echo -e "${GREEN}Backup created:${RESET} $backup_file"
   fi
 
-  # ---- NOVO: verifica se b2sum existe ----
   if ! command -v b2sum &>/dev/null; then
     echo -e "${RED}Error:${RESET} 'b2sum' not found. Please install it (e.g., from coreutils)."
     return
@@ -85,11 +84,9 @@ install_theme() {
   echo -e "${CYAN}Copying theme image to $theme_dir...${RESET}"
   cp "./cachyos.png" "$theme_dir/"
 
-  # ---- NOVO: calcula o hash da imagem copiada ----
   hash=$(b2sum "$theme_dir/cachyos.png" | awk '{print $1}')
   echo -e "${GREEN}BLAKE2B hash: $hash${RESET}"
 
-  # ---- NOVO: constrói o parâmetro wallpaper com hash ----
   WALLPAPER_PARAM="wallpaper: boot():/cachyos.png#$hash"
 
   # Define os parâmetros (atualizados)
