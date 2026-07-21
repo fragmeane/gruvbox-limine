@@ -1,14 +1,12 @@
-# Limine Theme CachyOS
-##### AUTHOR: diegons490
+# Gruvbox Limine
 
-#### After downloading the files, open the terminal in the folder where they are and run the command to install or uninstall the theme.
-#### After installation the theme will be set automatically
+> [!NOTE]
+> Merely adjusted main repo to enable convenient installation for my own theme.
+> Credits go to **[diegons490](https://github.com/diegons490)**
 
-
-#### Install theme:
+### Installation
+1. Open terminal inside the directory
+2. Run `setup.sh`
 ```shell
 $ sudo bash setup.sh
 ```
-
-# Screenshot
-![screenshot](/preview.png?raw=true)
