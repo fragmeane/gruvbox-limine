@@ -17,19 +17,17 @@ CYAN="\e[36m"
 RESET="\e[0m"
 BOLD="\e[1m"
 
-THEME_NAME="cachyos"
+THEME_NAME="gruvbox"
 BACKUP_SUFFIX=".bak-$THEME_NAME"
 PARAMS=(
-  "term_palette: 1e1e2e;f38ba8;a6e3a1;f9e2af;89b4fa;f5c2e7;94e2d5;cdd6f4"
-  "term_palette_bright: 585b70;f38ba8;a6e3a1;f9e2af;89b4fa;f5c2e7;94e2d5;cdd6f4"
-  "term_background: ffffffff"
-  "term_foreground: cdd6f4"
-  "term_background_bright: ffffffff"
-  "term_foreground_bright: cdd6f4"
-  "timeout: 10"
-  "wallpaper: boot():/cachyos.png"
+  "term_palette: 1d2021;cc241d;689d6a;d79921;458588;b16286;98971a;ebdbb2"
+  "term_palette_bright: 32302f;cc241d;689d6a;d79921;458588;b16286;98971a;ebdbb2"
+  "term_background: fbf1c700"
+  "term_foreground: ebdbb2"
+  "term_background_bright: fbf1c700"
+  "term_foreground_bright: ebdbb2"
   "interface_branding:"
-  "default_entry: 2"
+  "wallpaper: boot():/bunny.png"
 )
 
 # Search for limine.conf recursively under /boot
@@ -88,7 +86,7 @@ install_theme() {
 
   theme_dir=$(dirname "$limine_conf")
   echo -e "${CYAN}Copying theme image to $theme_dir...${RESET}"
-  cp "./cachyos.png" "$theme_dir/"
+  cp "./bunny.png" "$theme_dir/"
 
   echo -e "${GREEN}${BOLD}Theme installed successfully!${RESET}"
 
@@ -117,7 +115,7 @@ remove_theme() {
 
   theme_dir=$(dirname "$limine_conf")
   echo -e "${CYAN}Removing theme image from $theme_dir...${RESET}"
-  rm -f "$theme_dir/cachyos.png"
+  rm -f "$theme_dir/bunny.png"
 
   echo -e "${GREEN}${BOLD}Theme removed and backup restored!${RESET}"
 
